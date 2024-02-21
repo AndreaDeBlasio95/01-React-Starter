@@ -1,5 +1,5 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import reactLogo from "./assets/react-icon-280.png";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
@@ -18,6 +18,7 @@ function Header() {
   const description = reactDescriptions[getRandomInt(2)];
   return (
     <header>
+      <img src={reactLogo} alt="React Logo" />
       <h1>First React</h1>
       <p>This is the first react project!</p>
       <p>{description} - This is a dynamic value</p>
