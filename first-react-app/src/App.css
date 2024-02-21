@@ -10,3 +10,10 @@
 html {
   background: linear-gradient(#ffc53a, #f5f749);
 }
+
+#core-topics {
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: #1b1b1b;
+  color: #91bbff;
+}
