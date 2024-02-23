@@ -1,4 +1,5 @@
-import reactLogo from "../assets/react.svg";
+import reactLogo from "../../assets/react.svg";
+import "./Header.css";
 
 // Words we will use to describe React
 const reactDescriptions = [

@@ -1,0 +1,25 @@
+/* Header.css */
+
+header {
+  /* General styles for the header */
+  background-color: #f0f0f018; /* Light grey background */
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd; /* Light border to separate from content */
+}
+
+header h1 {
+  /* Styling for the main title within the header */
+  color: #333; /* Dark grey color for high contrast */
+  font-family: "Arial", sans-serif; /* Common, web-safe font */
+  font-size: 48px; /* Moderately large font size for prominence */
+  margin-bottom: 10px; /* Spacing below the title */
+}
+
+header p {
+  /* Styling for paragraphs within the header */
+  color: #666; /* Medium grey for the paragraph text */
+  font-family: "Verdana", sans-serif; /* A clean, sans-serif font */
+  font-size: 14px; /* Standard font size for readability */
+  margin-top: 0; /* Removing default top margin for alignment */
+}

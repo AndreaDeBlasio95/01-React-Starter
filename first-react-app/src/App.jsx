@@ -1,6 +1,6 @@
 import "./App.css";
 import { CORE_TOPICS } from "./data";
-import Header from "./components/Header.jsx";
+import Header from "./components/Header/Header.jsx";
 import CoreTopic from "./components/CoreTopic.jsx";
 
 function App() {
