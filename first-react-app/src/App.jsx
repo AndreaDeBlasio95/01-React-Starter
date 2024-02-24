@@ -2,6 +2,8 @@ import "./App.css";
 import { CORE_TOPICS } from "./data";
 import Header from "./components/Header/Header.jsx";
 import CoreTopic from "./components/CoreTopic.jsx";
+import TabButton from "./components/TabButton.jsx";
+import "./components/MenuStyles.css";
 
 function App() {
   return (
@@ -19,6 +21,14 @@ function App() {
             <CoreTopic {...CORE_TOPICS[1]} />
             <CoreTopic {...CORE_TOPICS[2]} />
           </ul>
+        </section>
+        <section id="otherTopicsSection">
+          <h2>Other Topics</h2>
+          <menu>
+            <TabButton>Topic 1</TabButton>
+            <TabButton>Topic 2</TabButton>
+            <TabButton>Topic 3</TabButton>
+          </menu>
         </section>
       </main>
     </div>
