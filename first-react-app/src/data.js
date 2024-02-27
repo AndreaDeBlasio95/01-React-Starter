@@ -21,7 +21,7 @@ export const CORE_TOPICS = [
 export const EXAMPLES = {
   topic_1: {
     title: "First Topic",
-    description: "Description 1st topic",
+    description: "Description 1st topic - This could be a long description.",
   },
   topic_2: {
     title: "Second Topic",
