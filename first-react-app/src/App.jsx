@@ -6,8 +6,8 @@ import TabButton from "./components/TabButton.jsx";
 import "./components/MenuStyles.css";
 
 function App() {
-  function handleSelect() {
-    console.log("Hello, selected!");
+  function handleSelect(selectedButton) {
+    console.log(selectedButton);
   }
 
   return (
@@ -29,9 +29,15 @@ function App() {
         <section id="otherTopicsSection">
           <h2>Other Topics</h2>
           <menu>
-            <TabButton onSelect={handleSelect}>Topic 1</TabButton>
-            <TabButton onSelect={handleSelect}>Topic 2</TabButton>
-            <TabButton onSelect={handleSelect}>Topic 3</TabButton>
+            <TabButton onSelect={() => handleSelect("Topic 1")}>
+              Topic 1
+            </TabButton>
+            <TabButton onSelect={() => handleSelect("Topic 2")}>
+              Topic 2
+            </TabButton>
+            <TabButton onSelect={() => handleSelect("Topic 3")}>
+              Topic 3
+            </TabButton>
           </menu>
           <menu>Dynamic Content</menu>
         </section>
