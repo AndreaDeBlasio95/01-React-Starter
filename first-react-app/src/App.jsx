@@ -1,3 +1,4 @@
+import { useState } from "react"; // this is react hook
 import "./App.css";
 import { CORE_TOPICS } from "./data";
 import Header from "./components/Header/Header.jsx";
@@ -6,8 +7,19 @@ import TabButton from "./components/TabButton.jsx";
 import "./components/MenuStyles.css";
 
 function App() {
+  // you can use the useState hook to create state variables only in functional components and not in nested functions, loops, or conditions.
+  // Rule 1: Only call hooks inside of Component Functions
+  // Rule 2: Only call hooks on the top level
+
+  const [selectedTopic, setSelectedTopic] = useState("Please click a button");
+  // Breakdown of the above line:
+  // const [counter, setCounter] = useState(0);
+  // we can think of useState as a function that returns an array with two elements:
+  // const [ currentState, stateUpdatingFunction ] = useState(initialState);
+
   function handleSelect(selectedButton) {
-    console.log(selectedButton);
+    setSelectedTopic(selectedButton);
+    console.log(selectedTopic);
   }
 
   return (
@@ -39,7 +51,7 @@ function App() {
               Topic 3
             </TabButton>
           </menu>
-          <menu>Dynamic Content</menu>
+          <menu>{selectedTopic}</menu>
         </section>
       </main>
     </div>
