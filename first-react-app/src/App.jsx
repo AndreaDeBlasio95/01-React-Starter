@@ -51,13 +51,22 @@ function App() {
         <section id="otherTopicsSection">
           <h2>Other Topics</h2>
           <menu>
-            <TabButton onSelect={() => handleSelect("topic_1")}>
+            <TabButton
+              isSelected={selectedTopic === "topic_1"}
+              onSelect={() => handleSelect("topic_1")}
+            >
               Topic 1
             </TabButton>
-            <TabButton onSelect={() => handleSelect("topic_2")}>
+            <TabButton
+              isSelected={selectedTopic === "topic_2"}
+              onSelect={() => handleSelect("topic_2")}
+            >
               Topic 2
             </TabButton>
-            <TabButton onSelect={() => handleSelect("topic_3")}>
+            <TabButton
+              isSelected={selectedTopic === "topic_3"}
+              onSelect={() => handleSelect("topic_3")}
+            >
               Topic 3
             </TabButton>
           </menu>
