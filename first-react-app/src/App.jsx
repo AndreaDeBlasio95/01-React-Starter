@@ -12,7 +12,7 @@ function App() {
   // Rule 1: Only call hooks inside of Component Functions
   // Rule 2: Only call hooks on the top level
 
-  const [selectedTopic, setSelectedTopic] = useState("topic_1");
+  const [selectedTopic, setSelectedTopic] = useState();
   // Breakdown of the above line:
   // const [counter, setCounter] = useState(0);
   // we can think of useState as a function that returns an array with two elements:
@@ -23,6 +23,15 @@ function App() {
     console.log(selectedTopic);
   }
 
+  let tabContent = <p>Please select a topic.</p>;
+  if (selectedTopic) {
+    tabContent = (
+      <div>
+        <h3>{EXAMPLES[selectedTopic].title}</h3>
+        <p>{EXAMPLES[selectedTopic].description}</p>
+      </div>
+    );
+  }
   return (
     <div>
       <Header />
@@ -52,10 +61,7 @@ function App() {
               Topic 3
             </TabButton>
           </menu>
-          <div>
-            <h3>{EXAMPLES[selectedTopic].title}</h3>
-            <p>{EXAMPLES[selectedTopic].description}</p>
-          </div>
+          {tabContent}
         </section>
       </main>
     </div>
