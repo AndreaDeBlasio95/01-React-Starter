@@ -39,13 +39,9 @@ function App() {
         <section id="core-topics">
           <h2>Main Topics</h2>
           <ul>
-            <CoreTopic
-              title={CORE_TOPICS[0].title}
-              description={CORE_TOPICS[0].description}
-              image={CORE_TOPICS[0].image}
-            />
-            <CoreTopic {...CORE_TOPICS[1]} />
-            <CoreTopic {...CORE_TOPICS[2]} />
+            {CORE_TOPICS.map((topic) => (
+              <CoreTopic key={topic.title} {...topic} />
+            ))}
           </ul>
         </section>
         <section id="otherTopicsSection">
