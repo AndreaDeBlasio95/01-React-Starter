@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react"; // this is react hook
+import { useState } from "react"; // this is react hook
 import "./App.css";
 import { CORE_TOPICS } from "./data";
 import Header from "./components/Header/Header.jsx";
@@ -33,7 +33,7 @@ function App() {
     );
   }
   return (
-    <Fragment>
+    <>
       <Header />
       <main>
         <section id="core-topics">
@@ -69,7 +69,7 @@ function App() {
           {tabContent}
         </section>
       </main>
-    </Fragment>
+    </>
   );
 }
 
