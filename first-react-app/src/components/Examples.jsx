@@ -1,6 +1,7 @@
 import { useState } from "react"; // this is react hook
 import TabButton from "./TabButton";
 import { EXAMPLES } from "../data";
+import Section from "./Section";
 
 // you can use the useState hook to create state variables only in functional components and not in nested functions, loops, or conditions.
 // Rule 1: Only call hooks inside of Component Functions
@@ -28,29 +29,28 @@ export default function Example() {
     );
   }
   return (
-    <section id="otherTopicsSection">
-      <h2>Other Topics</h2>
+    <Section title="Example" id="otherTopicsSection">
       <menu>
         <TabButton
           isSelected={selectedTopic === "topic_1"}
-          onSelect={() => handleSelect("topic_1")}
+          onClick={() => handleSelect("topic_1")}
         >
           Topic 1
         </TabButton>
         <TabButton
           isSelected={selectedTopic === "topic_2"}
-          onSelect={() => handleSelect("topic_2")}
+          onClick={() => handleSelect("topic_2")}
         >
           Topic 2
         </TabButton>
         <TabButton
           isSelected={selectedTopic === "topic_3"}
-          onSelect={() => handleSelect("topic_3")}
+          onClick={() => handleSelect("topic_3")}
         >
           Topic 3
         </TabButton>
       </menu>
       {tabContent}
-    </section>
+    </Section>
   );
 }
